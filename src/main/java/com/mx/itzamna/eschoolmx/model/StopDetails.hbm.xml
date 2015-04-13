@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.StopDetails" table="stop_details" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="routeId" type="java.lang.Integer">
+            <column name="route_id" />
+        </property>
+        <property name="stopName" type="string">
+            <column name="stop_name" length="120" />
+        </property>
+        <property name="fare" type="string">
+            <column name="fare" length="120" />
+        </property>
+        <property name="arrivalMrng" type="time">
+            <column name="arrival_mrng" length="8" />
+        </property>
+        <property name="departureMrng" type="time">
+            <column name="departure_mrng" length="8" />
+        </property>
+        <property name="arrivalEvng" type="time">
+            <column name="arrival_evng" length="8" />
+        </property>
+        <property name="departureEvng" type="time">
+            <column name="departure_evng" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

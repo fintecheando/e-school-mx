@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.ProfilesFields" table="profiles_fields" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="varname" type="string">
+            <column name="varname" length="50" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" not-null="true" />
+        </property>
+        <property name="fieldType" type="string">
+            <column name="field_type" length="50" not-null="true" />
+        </property>
+        <property name="fieldSize" type="string">
+            <column name="field_size" length="15" not-null="true" />
+        </property>
+        <property name="fieldSizeMin" type="string">
+            <column name="field_size_min" length="15" not-null="true" />
+        </property>
+        <property name="required" type="int">
+            <column name="required" not-null="true" />
+        </property>
+        <property name="match" type="string">
+            <column name="match" not-null="true" />
+        </property>
+        <property name="range" type="string">
+            <column name="range" not-null="true" />
+        </property>
+        <property name="errorMessage" type="string">
+            <column name="error_message" not-null="true" />
+        </property>
+        <property name="otherValidator" type="string">
+            <column name="other_validator" length="5000" not-null="true" />
+        </property>
+        <property name="default_" type="string">
+            <column name="default" not-null="true" />
+        </property>
+        <property name="widget" type="string">
+            <column name="widget" not-null="true" />
+        </property>
+        <property name="widgetparams" type="string">
+            <column name="widgetparams" length="5000" not-null="true" />
+        </property>
+        <property name="position" type="int">
+            <column name="position" not-null="true" />
+        </property>
+        <property name="visible" type="int">
+            <column name="visible" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

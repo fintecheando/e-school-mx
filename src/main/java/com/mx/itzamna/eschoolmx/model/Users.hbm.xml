@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Users" table="users" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="128" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="128" not-null="true" unique="true" />
+        </property>
+        <property name="activkey" type="string">
+            <column name="activkey" length="128" not-null="true" />
+        </property>
+        <property name="createAt" type="timestamp">
+            <column name="create_at" length="19" not-null="true" />
+        </property>
+        <property name="lastvisitAt" type="timestamp">
+            <column name="lastvisit_at" length="19" not-null="true" />
+        </property>
+        <property name="superuser" type="int">
+            <column name="superuser" not-null="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+        <one-to-one name="profiles" class="com.mx.itzamna.eschoolmx.model.Profiles"></one-to-one>
+    </class>
+</hibernate-mapping>

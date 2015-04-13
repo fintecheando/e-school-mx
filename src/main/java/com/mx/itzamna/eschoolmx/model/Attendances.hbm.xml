@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Attendances" table="attendances" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="studentId" type="java.lang.Integer">
+            <column name="student_id" />
+        </property>
+        <property name="periodTableEntryId" type="java.lang.Integer">
+            <column name="period_table_entry_id" />
+        </property>
+        <property name="forenoon" type="java.lang.Boolean">
+            <column name="forenoon" />
+        </property>
+        <property name="afternoon" type="java.lang.Boolean">
+            <column name="afternoon" />
+        </property>
+        <property name="reason" type="string">
+            <column name="reason" />
+        </property>
+    </class>
+</hibernate-mapping>

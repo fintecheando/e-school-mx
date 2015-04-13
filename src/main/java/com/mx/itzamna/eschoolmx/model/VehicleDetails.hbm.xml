@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.VehicleDetails" table="vehicle_details" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="vehicleNo" type="string">
+            <column name="vehicle_no" length="120" />
+        </property>
+        <property name="vehicleCode" type="string">
+            <column name="vehicle_code" length="120" />
+        </property>
+        <property name="noOfSeats" type="string">
+            <column name="no_of_seats" length="120" />
+        </property>
+        <property name="maximumCapacity" type="string">
+            <column name="maximum_capacity" length="120" />
+        </property>
+        <property name="vehicleType" type="string">
+            <column name="vehicle_type" length="120" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="120" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="120" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="120" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="120" />
+        </property>
+        <property name="insurance" type="string">
+            <column name="insurance" length="120" />
+        </property>
+        <property name="taxRemitted" type="string">
+            <column name="tax_remitted" length="120" />
+        </property>
+        <property name="permit" type="string">
+            <column name="permit" length="120" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="120" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

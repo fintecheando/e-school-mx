@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.ArchivedExamScores" table="archived_exam_scores" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="studentId" type="java.lang.Integer">
+            <column name="student_id" />
+        </property>
+        <property name="examId" type="java.lang.Integer">
+            <column name="exam_id" />
+        </property>
+        <property name="marks" type="big_decimal">
+            <column name="marks" precision="7" />
+        </property>
+        <property name="gradingLevelId" type="java.lang.Integer">
+            <column name="grading_level_id" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" />
+        </property>
+        <property name="isFailed" type="java.lang.Boolean">
+            <column name="is_failed" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="19" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

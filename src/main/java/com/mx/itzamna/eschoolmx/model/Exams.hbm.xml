@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Exams" table="exams" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="examGroupId" type="java.lang.Integer">
+            <column name="exam_group_id" />
+        </property>
+        <property name="subjectId" type="java.lang.Integer">
+            <column name="subject_id" />
+        </property>
+        <property name="startTime" type="timestamp">
+            <column name="start_time" length="19" />
+        </property>
+        <property name="endTime" type="timestamp">
+            <column name="end_time" length="19" />
+        </property>
+        <property name="maximumMarks" type="big_decimal">
+            <column name="maximum_marks" precision="10" />
+        </property>
+        <property name="minimumMarks" type="big_decimal">
+            <column name="minimum_marks" precision="10" />
+        </property>
+        <property name="gradingLevelId" type="java.lang.Integer">
+            <column name="grading_level_id" />
+        </property>
+        <property name="weightage" type="java.lang.Integer">
+            <column name="weightage" />
+        </property>
+        <property name="eventId" type="java.lang.Integer">
+            <column name="event_id" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="19" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

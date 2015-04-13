@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.StoreCategory" table="store_category" catalog="villaeducativa" optimistic-lock="version">
+        <id name="caId" type="java.lang.Integer">
+            <column name="ca_id" />
+            <generator class="identity" />
+        </id>
+        <property name="caName" type="string">
+            <column name="ca_name" length="200" not-null="true" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.CmsContent" table="cms_content" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nodeId" type="int">
+            <column name="nodeId" not-null="true" />
+        </property>
+        <property name="locale" type="string">
+            <column name="locale" length="50" not-null="true" />
+        </property>
+        <property name="heading" type="string">
+            <column name="heading" />
+        </property>
+        <property name="body" type="string">
+            <column name="body" />
+        </property>
+        <property name="css" type="string">
+            <column name="css" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" />
+        </property>
+        <property name="pageTitle" type="string">
+            <column name="pageTitle" />
+        </property>
+        <property name="breadcrumb" type="string">
+            <column name="breadcrumb" />
+        </property>
+        <property name="metaTitle" type="string">
+            <column name="metaTitle" />
+        </property>
+        <property name="metaDescription" type="string">
+            <column name="metaDescription" />
+        </property>
+        <property name="metaKeywords" type="string">
+            <column name="metaKeywords" />
+        </property>
+    </class>
+</hibernate-mapping>

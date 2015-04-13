@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.MailboxMessage" table="mailbox_message" catalog="villaeducativa" optimistic-lock="version">
+        <id name="messageId" type="java.lang.Integer">
+            <column name="message_id" />
+            <generator class="identity" />
+        </id>
+        <property name="conversationId" type="int">
+            <column name="conversation_id" not-null="true" />
+        </property>
+        <property name="created" type="int">
+            <column name="created" not-null="true" />
+        </property>
+        <property name="senderId" type="int">
+            <column name="sender_id" not-null="true" />
+        </property>
+        <property name="recipientId" type="int">
+            <column name="recipient_id" not-null="true" />
+        </property>
+        <property name="text" type="string">
+            <column name="text" length="16777215" not-null="true" />
+        </property>
+        <property name="crc64" type="long">
+            <column name="crc64" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

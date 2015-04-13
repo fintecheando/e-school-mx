@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.EventsOld" table="events_old" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19" />
+        </property>
+        <property name="isCommon" type="java.lang.Boolean">
+            <column name="is_common" />
+        </property>
+        <property name="isHoliday" type="java.lang.Boolean">
+            <column name="is_holiday" />
+        </property>
+        <property name="isExam" type="java.lang.Boolean">
+            <column name="is_exam" />
+        </property>
+        <property name="isDue" type="java.lang.Boolean">
+            <column name="is_due" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="19" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="19" />
+        </property>
+        <property name="originId" type="java.lang.Integer">
+            <column name="origin_id" />
+        </property>
+        <property name="originType" type="string">
+            <column name="origin_type" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.BuyProduct" table="buy_product" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="studentId" type="int">
+            <column name="student_id" not-null="true" />
+        </property>
+        <property name="prName" type="string">
+            <column name="pr_name" length="200" not-null="true" />
+        </property>
+        <property name="prBrand" type="string">
+            <column name="pr_brand" length="200" not-null="true" />
+        </property>
+        <property name="prQuantity" type="java.lang.Integer">
+            <column name="pr_quantity" />
+        </property>
+        <property name="productId" type="int">
+            <column name="product_id" not-null="true" />
+        </property>
+        <property name="issuedDate" type="timestamp">
+            <column name="issued_date" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

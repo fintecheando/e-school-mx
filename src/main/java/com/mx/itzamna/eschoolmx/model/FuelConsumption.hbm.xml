@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.FuelConsumption" table="fuel_consumption" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="vehicleId" type="string">
+            <column name="vehicle_id" length="120" />
+        </property>
+        <property name="fuelConsumed" type="string">
+            <column name="fuel_consumed" length="120" />
+        </property>
+        <property name="amount" type="string">
+            <column name="amount" length="120" />
+        </property>
+        <property name="consumedDate" type="date">
+            <column name="consumed_date" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

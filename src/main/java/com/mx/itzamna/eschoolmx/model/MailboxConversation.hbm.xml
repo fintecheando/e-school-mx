@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.MailboxConversation" table="mailbox_conversation" catalog="villaeducativa" optimistic-lock="version">
+        <id name="conversationId" type="java.lang.Integer">
+            <column name="conversation_id" />
+            <generator class="identity" />
+        </id>
+        <property name="initiatorId" type="int">
+            <column name="initiator_id" not-null="true" />
+        </property>
+        <property name="interlocutorId" type="int">
+            <column name="interlocutor_id" not-null="true" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" length="100" not-null="true" />
+        </property>
+        <property name="bmRead" type="byte">
+            <column name="bm_read" not-null="true" />
+        </property>
+        <property name="bmDeleted" type="byte">
+            <column name="bm_deleted" not-null="true" />
+        </property>
+        <property name="modified" type="int">
+            <column name="modified" not-null="true" />
+        </property>
+        <property name="isSystem" type="string">
+            <column name="is_system" length="4" not-null="true" />
+        </property>
+        <property name="initiatorDel" type="java.lang.Boolean">
+            <column name="initiator_del" />
+        </property>
+        <property name="interlocutorDel" type="java.lang.Boolean">
+            <column name="interlocutor_del" />
+        </property>
+    </class>
+</hibernate-mapping>

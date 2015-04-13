@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.UserDetails" table="user_details" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="agencyEmployeeId" type="java.lang.Integer">
+            <column name="agency_employee_id" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="120" not-null="true" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="firstname" length="120" not-null="true" />
+        </property>
+        <property name="suffix" type="string">
+            <column name="suffix" length="120" not-null="true" />
+        </property>
+        <property name="address1" type="string">
+            <column name="address1" length="120" />
+        </property>
+        <property name="address2" type="string">
+            <column name="address2" length="120" />
+        </property>
+        <property name="zipCode" type="java.lang.Integer">
+            <column name="zip_code" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="120" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="120" />
+        </property>
+        <property name="phone1" type="java.lang.Integer">
+            <column name="phone1" />
+        </property>
+        <property name="phone2" type="java.lang.Integer">
+            <column name="phone2" />
+        </property>
+        <property name="dob" type="timestamp">
+            <column name="dob" length="19" />
+        </property>
+        <property name="ssn" type="java.lang.Integer">
+            <column name="ssn" />
+        </property>
+        <property name="includepayroll" type="string">
+            <column name="includepayroll" length="120" />
+        </property>
+        <property name="employeeType" type="string">
+            <column name="employee_type" length="120" />
+        </property>
+        <property name="weekendAccess" type="string">
+            <column name="weekend_access" length="120" />
+        </property>
+        <property name="earliestLoginTime" type="time">
+            <column name="earliest_login_time" length="8" />
+        </property>
+        <property name="automaticLodoutTime" type="time">
+            <column name="automatic_lodout_time" length="8" />
+        </property>
+        <property name="hireDate" type="timestamp">
+            <column name="hire_date" length="19" />
+        </property>
+        <property name="terminationDate" type="timestamp">
+            <column name="termination_date" length="19" />
+        </property>
+        <property name="file" type="string">
+            <column name="File" length="256" />
+        </property>
+        <property name="attachment" type="string">
+            <column name="attachment" length="256" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="256" />
+        </property>
+        <property name="photoThumb" type="string">
+            <column name="photo_thumb" />
+        </property>
+        <property name="sign" type="string">
+            <column name="sign" length="120" />
+        </property>
+    </class>
+</hibernate-mapping>

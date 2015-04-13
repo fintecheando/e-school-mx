@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.FinanceFeeStructureElements" table="finance_fee_structure_elements" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="15" />
+        </property>
+        <property name="label" type="string">
+            <column name="label" />
+        </property>
+        <property name="batchId" type="java.lang.Integer">
+            <column name="batch_id" />
+        </property>
+        <property name="studentCategoryId" type="java.lang.Integer">
+            <column name="student_category_id" />
+        </property>
+        <property name="studentId" type="java.lang.Integer">
+            <column name="student_id" />
+        </property>
+        <property name="parentId" type="java.lang.Integer">
+            <column name="parent_id" />
+        </property>
+        <property name="feeCollectionId" type="java.lang.Integer">
+            <column name="fee_collection_id" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+    </class>
+</hibernate-mapping>

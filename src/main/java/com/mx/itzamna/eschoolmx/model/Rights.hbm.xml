@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Rights" table="rights" catalog="villaeducativa" optimistic-lock="version">
+        <id name="itemname" type="string">
+            <column name="itemname" length="64" />
+            <generator class="foreign">
+                <param name="property">authitem</param>
+            </generator>
+        </id>
+        <one-to-one name="authitem" class="com.mx.itzamna.eschoolmx.model.Authitem" constrained="true"></one-to-one>
+        <property name="type" type="int">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="weight" type="int">
+            <column name="weight" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

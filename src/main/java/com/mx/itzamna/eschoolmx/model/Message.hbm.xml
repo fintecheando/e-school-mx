@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Message" table="message" catalog="villaeducativa" optimistic-lock="version">
+        <id name="msgId" type="java.lang.Integer">
+            <column name="msg_id" />
+            <generator class="identity" />
+        </id>
+        <property name="subject" type="string">
+            <column name="subject" length="120" not-null="true" />
+        </property>
+        <property name="msgContent" type="string">
+            <column name="msg_content" length="65535" not-null="true" />
+        </property>
+        <property name="msgUploads" type="string">
+            <column name="msg_uploads" length="120" not-null="true" />
+        </property>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="msgTime" type="time">
+            <column name="msg_time" length="8" not-null="true" />
+        </property>
+        <property name="msgDate" type="date">
+            <column name="msg_date" length="10" not-null="true" />
+        </property>
+        <property name="isRead" type="int">
+            <column name="is_read" not-null="true" />
+        </property>
+        <property name="senderId" type="int">
+            <column name="sender_id" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <property name="isTask" type="java.lang.Integer">
+            <column name="is_task" />
+        </property>
+    </class>
+</hibernate-mapping>

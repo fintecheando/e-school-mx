@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Sourcemessage" table="sourcemessage" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="category" type="string">
+            <column name="category" length="32" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" length="65535" />
+        </property>
+        <set name="osTranslateds" table="os_translated" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id" not-null="true" />
+            </key>
+            <one-to-many class="com.mx.itzamna.eschoolmx.model.OsTranslated" />
+        </set>
+    </class>
+</hibernate-mapping>

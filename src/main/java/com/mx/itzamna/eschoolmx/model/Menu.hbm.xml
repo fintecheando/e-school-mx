@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.Menu" table="menu" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Byte">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="parentId" type="byte">
+            <column name="parent_id" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" not-null="true" />
+        </property>
+        <property name="class_" type="string">
+            <column name="class" not-null="true" />
+        </property>
+        <property name="position" type="byte">
+            <column name="position" not-null="true" />
+        </property>
+        <property name="groupId" type="byte">
+            <column name="group_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

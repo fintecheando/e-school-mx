@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 12/04/2015 11:30:13 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mx.itzamna.eschoolmx.model.ArchivedGuardians" table="archived_guardians" catalog="villaeducativa" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="wardId" type="java.lang.Integer">
+            <column name="ward_id" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" />
+        </property>
+        <property name="relation" type="string">
+            <column name="relation" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="officePhone1" type="string">
+            <column name="office_phone1" />
+        </property>
+        <property name="officePhone2" type="string">
+            <column name="office_phone2" />
+        </property>
+        <property name="mobilePhone" type="string">
+            <column name="mobile_phone" />
+        </property>
+        <property name="officeAddressLine1" type="string">
+            <column name="office_address_line1" />
+        </property>
+        <property name="officeAddressLine2" type="string">
+            <column name="office_address_line2" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" />
+        </property>
+        <property name="countryId" type="java.lang.Integer">
+            <column name="country_id" />
+        </property>
+        <property name="dob" type="date">
+            <column name="dob" length="10" />
+        </property>
+        <property name="occupation" type="string">
+            <column name="occupation" />
+        </property>
+        <property name="income" type="string">
+            <column name="income" />
+        </property>
+        <property name="education" type="string">
+            <column name="education" />
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at" length="19" />
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
