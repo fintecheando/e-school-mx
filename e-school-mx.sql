@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.42, for linux2.6 (x86_64)
 --
--- Host: localhost    Database: villaeducativa
+-- Host: localhost    Database: e-school-mx
 -- ------------------------------------------------------
 -- Server version	5.5.42
 
